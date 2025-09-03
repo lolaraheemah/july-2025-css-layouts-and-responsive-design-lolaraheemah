@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Navigation - Flexbox */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #34495e;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #2c3e50;
+  border-radius: 5px;
+}
+
+/* Main Layout - CSS Grid */
+.main-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Content */
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+/* Cards - Flexbox */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  flex: 1;
+  background: #ecf0f1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-left: 2px solid #ddd;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 2px solid #ddd;
+    margin-top: 1rem;
+  }
+}
